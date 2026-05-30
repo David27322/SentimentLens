@@ -22,7 +22,7 @@ export default function HistoryPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-14">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-white mb-1">History</h1>
+        <h1 className="text-2xl font-bold text-black dark:text-white mb-1">History</h1>
         <p className="text-slate-500 text-sm">
           Your past sentiment analyses.
         </p>

@@ -23,7 +23,7 @@ export default function Home() {
         <span className="inline-block mb-4 px-3 py-1 rounded-full bg-violet-50 text-violet-600 text-xs font-medium tracking-wide uppercase">
           ML-Powered
         </span>
-        <h1 className="text-4xl font-bold text-white mb-4 leading-tight">
+        <h1 className="text-4xl font-bold text-black dark:text-white mb-4 leading-tight">
           Understand the sentiment <br /> behind any text
         </h1>
         <p className="text-slate-500 text-lg mb-8">
