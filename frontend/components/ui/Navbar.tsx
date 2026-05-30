@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SignInButton, UserButton, Show } from "@clerk/nextjs";
 
 const links = [
   { href: "/", label: "Home" },
@@ -19,6 +20,7 @@ export default function Navbar() {
         <Link href="/" className="font-semibold text-slate-900 tracking-tight">
           Sentiment<span className="text-violet-600">Lens</span>
         </Link>
+
         <div className="flex items-center gap-1">
           {links.map(({ href, label }) => (
             <Link
@@ -33,6 +35,19 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
+        </div>
+
+        <div className="flex items-center gap-3">
+          <Show when="signed-out">
+            <SignInButton mode="modal">
+              <button className="px-4 py-1.5 text-sm font-medium bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors">
+                Sign in
+              </button>
+            </SignInButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton />
+          </Show>
         </div>
       </div>
     </nav>

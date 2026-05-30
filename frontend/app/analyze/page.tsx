@@ -1,11 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useUser } from "@clerk/nextjs";
 import { getModels, predict, ModelInfo, PredictResponse } from "@/lib/api";
+import { savePrediction } from "@/lib/history";
 import TextInput from "@/components/analyze/TextInput";
 import ResultCard from "@/components/analyze/ResultCard";
 
 export default function AnalyzePage() {
+  const { user } = useUser();
   const [models, setModels] = useState<ModelInfo[]>([]);
   const [selectedModel, setSelectedModel] = useState("");
   const [text, setText] = useState("");
@@ -28,6 +31,12 @@ export default function AnalyzePage() {
     try {
       const res = await predict(selectedModel, text);
       setResult(res);
+
+      // save to history if signed in
+      if (user) {
+        const activeModel = models.find((m) => m.id === selectedModel)!;
+        await savePrediction(user.id, text, res, activeModel);
+      }
     } catch {
       setError("Something went wrong. Is the backend running?");
     } finally {
@@ -58,13 +67,15 @@ export default function AnalyzePage() {
           showModelSelect={true}
         />
 
-        {error && (
-          <p className="text-sm text-red-500 px-1">{error}</p>
+        {!user && (
+          <p className="text-xs text-slate-400 px-1">
+            Sign in to save your prediction history.
+          </p>
         )}
 
-        {result && (
-          <ResultCard result={result} model={activeModel} />
-        )}
+        {error && <p className="text-sm text-red-500 px-1">{error}</p>}
+
+        {result && <ResultCard result={result} model={activeModel} />}
       </div>
     </div>
   );
