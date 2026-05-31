@@ -1,15 +1,9 @@
 import json
 import joblib
 from pathlib import Path
-import os 
 
 ML_DIR = Path(__file__).parent
-def _registry_path() -> Path:
-    if os.getenv("ENV") == "production":
-        return ML_DIR / "registry.prod.json"
-    return ML_DIR / "registry.json"
-
-REGISTRY_PATH = _registry_path()
+REGISTRY_PATH = ML_DIR / "registry.json"
 
 
 def load_registry() -> list[dict]:
