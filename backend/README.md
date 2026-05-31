@@ -1,7 +1,7 @@
 ---
 title: Sentiment Lens Backend
 emoji: 🎭
-colorFrom: violet
+colorFrom: purple
 colorTo: purple
 sdk: docker
 app_port: 7860
