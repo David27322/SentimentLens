@@ -28,7 +28,7 @@
       "file": "models/ann_baseline_v1.h5",
       "vectorizer": "preprocessors/vectorizer_v1.pkl",
       "description": "Baseline ANN trained on 20k samples",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "ann_improved_v1",
@@ -38,7 +38,7 @@
       "file": "models/ann_improved_v1.h5",
       "vectorizer": "preprocessors/vectorizer_improved_v1.pkl",
       "description": "Improved ANN trained on 100k samples with negation handling",
-      "enabled": false
+      "enabled": true
     }
   ]
 }
