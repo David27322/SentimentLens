@@ -1,8 +1,7 @@
 # SentimentLens
 
 Social media sentiment analysis using Logistic Regression, Naive Bayes, and ANN — served via FastAPI + Next.js.
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
-(https://colab.research.google.com/github/David27322/SentimentLens/blob/main/notebooks/model_development.ipynb?raw=1)
+[![Open PDF](https://img.shields.io/badge/Colab-PDF-F9AB00?logo=googlecolab&logoColor=white)](notebooks/models_development.ipynb%20-%20Colab.pdf)
 
 ## Stack
 - **Frontend** — Next.js 14, Tailwind CSS
@@ -61,16 +60,13 @@ Upcoming model -> ann_WE+LSTM
 ## Notebooks
 ## 📓 Notebooks
 
-| Notebook | Description | Open in Colab |
-|----------|-------------|:-------------:|
-| 01_model_development.ipynb | EDA, Models training & Metrics | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
-(https://colab.research.google.com/github/David27322/SentimentLens/blob/main/notebooks/models_development.ipynb?raw=1)|
-| 02_model_playground.ipynb  | Trained models playground | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
-(https://colab.research.google.com/github/David27322/SentimentLens/blob/main/notebooks/models_playground.ipynb?raw=1)  |
-| 03_ann_improved.ipynb      | Ann with different hyperparameters| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
-(https://colab.research.google.com/github/David27322/SentimentLens/blob/main/notebooks/model_improved.ipynb?raw=1)   |
+## 📓 Notebooks
 
- **Note:** Use GPU runtime (`Runtime → Change runtime type → T4 GPU`) for best performance.
+| Notebook | View |
+|----------|------|
+| Model Development | [![Open PDF](https://img.shields.io/badge/Colab-PDF-F9AB00?logo=googlecolab&logoColor=white)](notebooks/models_development.ipynb%20-%20Colab.pdf) |
+| Model Playground | [![Open PDF](https://img.shields.io/badge/Colab-PDF-F9AB00?logo=googlecolab&logoColor=white)](notebooks/models_playground.ipynb%20-%20Colab.pdf) |
+| Model Improved | [![Open PDF](https://img.shields.io/badge/Colab-PDF-F9AB00?logo=googlecolab&logoColor=white)](https://github.com/David27322/SentimentLens/blob/main/notebooks/model_improved.ipynb%20-%20Colab.pdf) |
 
 
  ## Demo
