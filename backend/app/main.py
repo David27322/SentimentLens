@@ -23,7 +23,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://*.vercel.app",
+        "https://sentiment-analysis-3p5t.vercel.app/",
         "https://*.hf.space",
     ],
     allow_methods=["*"],
